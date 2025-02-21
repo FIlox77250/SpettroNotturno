@@ -1,0 +1,86 @@
+@import url("https://brcloud.fr/SpettroNotturno/SpettroNotturno.css");
+
+/* 🌈 Effet RGB animé sur l'overlay vocal */
+.speaking-indicator, 
+.voiceState--speaking, 
+.speaking, 
+.talking, 
+.talking-indicator {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080);
+    background-size: 400% 400%;
+    animation: rgb-speaking 1.5s infinite linear, glow 1s infinite alternate;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes rgb-speaking {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); }
+    to { box-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+/* 🌈 Effet RGB ultra-fluide sur les barres de défilement */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080);
+    background-size: 400% 400%;
+    animation: rgb-scroll 1.5s infinite linear, glow-scroll 1s infinite alternate;
+    border-radius: 5px;
+}
+
+@keyframes rgb-scroll {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow-scroll {
+    from { box-shadow: 0 0 3px rgba(255, 255, 255, 0.5); }
+    to { box-shadow: 0 0 10px rgba(255, 255, 255, 1); }
+}
+
+/* 🔔 Mention RGB animé avec effet néon */
+.mention {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080);
+    background-size: 400% 400%;
+    animation: rgb-mention 1.5s infinite linear, neon-glow 1s infinite alternate;
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-weight: bold;
+    color: white !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+@keyframes rgb-mention {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes neon-glow {
+    from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); }
+    to { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+/* ✨ Bordures RGB animées pour les messages */
+.messageContent {
+    border: 2px solid;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080);
+    border-image-slice: 1;
+    animation: border-rgb 2s linear infinite;
+}
+
+@keyframes border-rgb {
+    0% { border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080); }
+    50% { border-image-source: linear-gradient(45deg, #ff0080, #8000ff, #0066ff, #00ffee, #00ff00, #ffeb00, #ff7300, #ff0000); }
+    100% { border-image-source: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffee, #0066ff, #8000ff, #ff0080); }
+}
