@@ -16,7 +16,7 @@ A vibrant and dynamic Discord theme featuring smooth RGB animations and glowing 
 3. Import the theme via your chosen mod's theme settings
 4. Make sure you have the base theme installed by adding:
 ```css
-@import url("https://brcloud.fr/SpettroNotturno/SpettroNotturno.css");
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
 ```
 
 ## 🎨 Theme Preview
